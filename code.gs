@@ -299,6 +299,7 @@ function findMinPositiveInvestment() {
   }
 
   if (answer !== -1) {
+    answer+=10000; //設定緩衝值
     setVal("每年投入投資金額（參與複利）", answer);
     SpreadsheetApp.getUi().alert("✅ 自動反推完成（依總資產是否破產）：最低每年投資金額為 NT$" + answer.toLocaleString() + "\n請重新執行模擬查看詳情。");
   } else {
